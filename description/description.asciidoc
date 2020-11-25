@@ -46,6 +46,19 @@ image::./uc.png[]
 == 3. Разработка диаграммы классов и направлений развития
 .Диаграмма классов
 image::./class.png[]
+
+["plantuml", "asciidoctor-diagram-classes", "png"]
+---------------------------------------------------------------------
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+---------------------------------------------------------------------
+
 ----------------------------
 Итого:
 Посетитель: (id + money)
