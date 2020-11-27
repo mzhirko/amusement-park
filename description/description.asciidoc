@@ -61,6 +61,12 @@ image::./main-visitor-activity-diagram.png[]
 .Диаграмма активности "Работа с аттракционами"
 image::./main-attraction-activity-diagram.png[]
 
+.Диаграмма активности "Добавить посетителя"
+image::./add-visitor-activity-diagram.png[]
+
+.Диаграмма активности "Удалить посетителя"
+image::./delete-visitor-activity-diagram.png[]
+
 == 4. Разработка диаграммы классов и направлений развития
 .Диаграмма классов
 image::./class.png[]
