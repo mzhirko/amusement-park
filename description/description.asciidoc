@@ -58,7 +58,7 @@ image::./main-activity-diagram.png[]
 .Диаграмма активности "Работа с посетителями". Действия ведутся на стороне "Игрока".
 image::./main-visitor-activity-diagram.png[]
 
-.Диаграмма активности "Работа с аттракционами"
+.Диаграмма активности "Работа с парком аттракционов"
 image::./main-attraction-activity-diagram.png[]
 
 .Диаграмма активности "Добавить посетителя"
@@ -66,6 +66,27 @@ image::./add-visitor-activity-diagram.png[]
 
 .Диаграмма активности "Удалить посетителя"
 image::./delete-visitor-activity-diagram.png[]
+
+.Диаграмма активности "Приобрести билеты"
+image::./buy-ticket-activity-diagram.png[]
+
+.Диаграмма активности "Определить посетителя на аттракцион"
+image::./add-visitor-to-attraction-activity-diagram.png[]
+
+.Диаграмма активности "Удалить посетителя из парка"
+image::./remove-visitor-from-park-activity-diagram.png[]
+
+.Диаграмма активности "Просмотр "Главной аллеи""
+image::./view-valley-activity-diagram.png[]
+
+.Диаграмма активности "Просмотр аттракциона"
+image::./view-attraction-activity-diagram.png[]
+
+.Диаграмма активности "Удаление аттракциона"
+image::./delete-attraction-activity-diagram.png[]
+
+.Диаграмма активности "Покупка аттракциона"
+image::./buy-attraction-activity-diagram.png[]
 
 == 4. Разработка диаграммы классов и направлений развития
 .Диаграмма классов
@@ -75,9 +96,4 @@ image::./class.png[]
 Итого:
 Посетитель: (id + money)
 Аттракцион: (name + rideTime + capacity + customersOnBoard + currentRideTime + priceOfAttraction)
-Парк: (ticket_coast)
-
-Алгоритм:
-старт -> посетители -> показать список посетителей -> действия с посетителями => 2.. добавить посетителя -> сгенерить id -> ввести money -> save...
-=> удалить посетителя -> ввести id -> подтвердить -> система удаляет...
-...-> посетителей больше 1? (1..да/ 2.. нет) -> 2..вывести сообщение о необходимости добавить посетителя, 1.. вывести стоимость билета -> выбрать посетителя -> провер очка на бедность, бедный(1#да/2# нет)->
+Парк: (ticketPrice)
