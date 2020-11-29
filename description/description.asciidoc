@@ -88,6 +88,9 @@ image::./delete-attraction-activity-diagram.png[]
 .Диаграмма активности "Покупка аттракциона"
 image::./buy-attraction-activity-diagram.png[]
 
+.Диаграмма активности "Запуск аттракциона"
+image::./turn-attraction-on-activity-diagram.png[]
+
 == 4. Разработка диаграммы классов и направлений развития
 .Диаграмма классов
 image::./class.png[]
