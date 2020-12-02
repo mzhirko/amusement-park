@@ -95,6 +95,25 @@ image::./turn-attraction-on-activity-diagram.png[]
 .Диаграмма классов
 image::./class.png[]
 
+== 5. Разработка пользовательского интерфейса
+.Стартовое меню
+image::./ui-start.png[]
+
+.Выбор подраздела для редактирования
+image::./ui-edit.png[]
+
+.Работа с посетителями
+image::./ui-visitors-start.png[]
+
+.Работа с аттракционами
+image::./ui-attractions-start.png[]
+
+.Просмотр "Главной Аллеи"
+image::./ui-main-valley.png[]
+
+.Просмотр аттракциона
+image::./ui-attractions.png[]
+
 ----------------------------
 Итого:
 Посетитель: (id + money)
