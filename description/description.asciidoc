@@ -117,8 +117,6 @@ image::./ui-main-valley.png[]
 .Просмотр аттракциона
 image::./ui-attractions.png[]
 
-----------------------------
-Итого:
-Посетитель: (id + money)
-Аттракцион: (name + rideTime + capacity + customersOnBoard + currentRideTime + priceOfAttraction)
-Парк: (ticketPrice)
+== _done by_ 
+==== _ст. гр. 821701_ 
+=== _Жирко Мария_
