@@ -49,7 +49,7 @@ After the purchase of 10 attractions, there is a message about successful *simul
 
 == 2. Description of the main scenarios of user work with the program
 .Scenario diagram of use
-image:::./uc.png[]
+image::./uc.png[]
 
 == 3. Activity chart development
 .General chart of activity. Actions are performed on the Player's side.
@@ -71,38 +71,38 @@ image::./delete-visitor-activity-diagram.png[]
 image::./buy-ticket-activity-diagram.png[]
 
 .Chart of activity "Define visitor to the attraction"
-image::./add-visitor-to-attraction-activity-diagram.png[].
+image::./add-visitor-to-attraction-activity-diagram.png[]
 
 .Diagram of activity "Remove visitor from the park"
-image:::./remove-visitor-from-park-activity-diagram.png[]
+image::./remove-visitor-from-park-activity-diagram.png[]
 
 .Chart of activity "View "Main Alley".
-image::./view-valley-activity-diagram.png[].
+image::./view-valley-activity-diagram.png[]
 
 .Chart of activity "Viewing the attraction"
 image::./view-attraction-activity-diagram.png[]
 
 .Activity diagram "Removal of the attraction"
-image:::./delete-attraction-activity-diagram.png[]
+image::./delete-attraction-activity-diagram.png[]
 
 .Chart of activity "Buying the attraction"
 image::./buy-attraction-activity-diagram.png[]
 
 .Activity chart "Start the ride"
-image:::./turn-attraction-on-activity-diagram.png[]
+image::./turn-attraction-on-activity-diagram.png[]
 
 == 4. Development of a diagram of classes and directions of development
 .Diagram of "UI-1" classes
-image:::./ui-class-shorten-1.png[]
+image::./ui-class-shorten-1.png[]
 
 .Diagram of "UI-2" classes
-image:::./ui-class-shorten-2.png[]
+image::./ui-class-shorten-2.png[]
 
 .Diagram of "UI-3" classes
-image:::./ui-class-shorten-3.png[]
+image::./ui-class-shorten-3.png[]
 
 .Non-UI class diagram
-image:::./new-class.png[]
+image::./new-class.png[]
 
 == 5. State diagram development
 .Status diagram-1
@@ -113,19 +113,19 @@ image::./state-attractions.png[]
 
 == 6. User Interface Development
 .Start menu
-image:::./ui-start.png[]
+image::./ui-start.png[]
 
 .Selecting a subsection to edit
-image:::./ui-edit.png[]
+image::./ui-edit.png[]
 
-Working with visitors
-image:::./ui-visitors-start.png[]
+.Working with visitors
+image::./ui-visitors-start.png[]
 
 .Working with attractions
-image:::./ui-attractions-start.png[]
+image::./ui-attractions-start.png[]
 
 .Viewing "Main Alley"
-image:::./ui-main-valley.png[]
+image::./ui-main-valley.png[]
 
 Viewing the attraction
 image::./ui-attractions.png[]
