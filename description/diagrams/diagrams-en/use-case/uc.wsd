@@ -1,21 +1,21 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
-actor :игрок:
-rectangle "Симуляция парка развлечений" {
-  :игрок: -- (работа с посетителем)
-  (работа с посетителем) ..> (определение посетителя на аттракцион) : <<include>>
-  (работа с посетителем) <.. (удаление посетителя) : <<extends>>
-  (работа с посетителем) <.. (удаление посетителя из парка) : <<extends>>
-  (работа с посетителем) .> (создание посетителя) : <<include>>
-  (создание посетителя) .> (задание количества средств) : <<include>>
+actor :player:
+rectangle "Simulation of Entertainment Park" {
+  :player: -- (work with the visitor)
+  (work with the visitor) ..> (move the visitor to the attraction) : <<include>>
+  (work with the visitor) <.. (delete visitor) : <<extends>>
+  (work with the visitor) <.. (remove a visitor from the park) : <<extends>>
+  (work with the visitor) .> (create visitor) : <<include>>
+  (create visitor) .> (set visitors salary) : <<include>>
 
-  :игрок: -- (работа с аттракционами)
-  (работа с аттракционами) <.. (удаление аттракциона) : <<extends>>
-  (работа с аттракционами) ..> (покупка аттракциона) : <<include>>
-  (покупка аттракциона) ..> (нет свободных мест) : <<extends>>
-  (покупка аттракциона) ..> (некорректная сумма) : <<extends>>
-  (покупка аттракциона) .> (задание названия) : <<include>>
+  :player: -- (work with attractions)
+  (work with attractions) <.. (remove the attraction) : <<extends>>
+  (work with attractions) ..> (buy an attraction) : <<include>>
+  (buy an attraction) ..> (no seats available) : <<extends>>
+  (buy an attraction) ..> (incorrect sum) : <<extends>>
+  (buy an attraction) .> (title assignment) : <<include>>
 
 }
 @enduml

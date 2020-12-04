@@ -1,37 +1,37 @@
 @startuml
 hide empty description
 
-[*] --> Запуск_программы
-    Запуск_программы : entry / <<main>> :: старт
+[*] --> Start_Program
+    Start_Program : entry / <<main>> :: start
 
-    Запуск_программы --> Посетители : Окно_выбора_объекта:управление_посетителями()
-        Посетители : entry / Работа_с_посетителями : добавить_посетителя()
-        Посетители : entry / Работа_с_посетителями : удалить_посетителя()
-        Посетители : entry / Работа_с_посетителями : приобрести_билет()
-        Посетители : entry / Работа_с_посетителями : определить_посетителя_на_аттракцион()
-        Посетители : entry / Работа_с_посетителями : удалить_посетителя_из_парка()
-        Посетители : entry / Работа_с_посетителями : просмотр_списка_поетителей()
-        Посетители : exit / Работа_с_посетителями : просмотр_списка_поетителей() : Выйти
-            Посетители --> Добавить_посетителя: Окно_работы_с_посетителями:добавить_посетителя()
-                Добавить_посетителя : entry / Посетитель : сгенерировать_ID();
-                Добавить_посетителя : entry / Посетитель : добавить_зарплату(int);
-                Добавить_посетителя : entry / Посетитель : сохранить();
-            Добавить_посетителя --> Посетители
+    Start_Program --> Visitors : Window_object_selection:manage_visitors()
+        Visitors : entry / work_with_visitors : add_visitor()
+        Visitors : entry / work_with_visitors : delete_visitor()
+        Visitors : entry / work_with_visitors : buy_ticket()
+        Visitors : entry / work_with_visitors : define_visitor_to_attraction()
+        Visitors : entry / work_with_visitors : delete_visitor_from_park()
+        Visitors : entry / work_with_visitors : view_list_visitors()
+        Visitors : exit / work_with_visitors : view_list_visitors() : Exit
+            Visitors --> Add_Visitor: Work_With_Visitor_Window:Add_Visitor()
+                Add_Visitor : entry / visitor : generate_ID();
+                Add_Visitor : entry / visitor : add_payment(int);
+                Add_Visitor : entry / visitor : save();
+            Add_Visitor --> Visitors
 
-            Посетители --> Удалить_посетителя: Окно_работы_с_посетителями:удалить_посетителя()
-                Удалить_посетителя : entry / Контроллер : удалить_посетиетля();
-            Удалить_посетителя --> Посетители
+            Visitors --> Delete_Visitor: Window_Work_with_visitors:Delete_visitor()
+                Delete_Visitor : entry / controller : delete_visitor();
+            Delete_Visitor --> Visitors
 
-                    Удалить_посетителя --> Приобрести_билет: Окно_работы_с_посетителями:приобрести_билет()
-                    Добавить_посетителя --> Приобрести_билет: Окно_работы_с_посетителями:приобрести_билет()
-                        Приобрести_билет : entry / Управление_продажами_билетов : приобрести_билет();
+                    Delete_Visitor --> Purchase_Ticket: Window_Work_with_Visitors:Purchase_Ticket()
+                    Add_Visitor --> Purchase_Ticket: Work_Window_with_visitors:Purchase_ticket()
+                        Purchase_Ticket : entry / Sales_Management : purchase_ticket();
             
-            Посетители --> Определить_посетителя_на_аттракцион: Окно_работы_с_посетителями:приобрести_билет()
-                Определить_посетителя_на_аттракцион : entry / Управление_главной_аллеей : переместить_посетителя();
-            Определить_посетителя_на_аттракцион --> Посетители
+            Visitors --> Move_Visitor_To_Attraction: Work_Window_with_visitors:Purchase_Ticket()
+                Move_Visitor_To_Attraction : entry / control_main_alley : move_visitor();
+            Move_Visitor_To_Attraction --> Visitors
             
-            Посетители --> Удалить_посетителя_из_парка: Окно_работы_с_посетителями:удалить_посетителя_из_парка()
-                Удалить_посетителя_из_парка : entry / Управление_главной_аллеей : удалить_посетителя_из_парка();
-            Удалить_посетителя_из_парка --> Посетители 
-     
+            Visitors --> Delete_Visitor_From_Park: Work_Window_with_visitors:Delete_Visitor_From_Park()
+                Delete_Visitor_From_Park : entry / management of the main_alley : delete_visitor_from_park();
+            Delete_Visitor_From_Park --> Visitors 
+          
 @enduml

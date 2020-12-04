@@ -1,37 +1,37 @@
 @startuml
 hide empty description
 
-[*] --> Запуск_программы
-    Запуск_программы : entry / <<main>> :: старт
-    Запуск_программы --> Аттракционы : Окно_выбора_объекта:управление_аттракционами()
-        Аттракционы : entry / Работа_с_аттракционами : просмотр_списка_аттракционов(list)
-        Аттракционы : entry / Работа_с_аттракционами : купить_аттракцион()
-        Аттракционы : entry / Работа_с_аттракционами : удалить_аттракцион()
-        Аттракционы : entry / Работа_с_аттракционами : просмотр_аттракциона()
-        Аттракционы : entry / Работа_с_аттракционами : просмотр_главной_аллеи()
-        Аттракционы : exit / Работа_с_аттракционами : просмотр_списка_аттракционов(list) : Выйти
+[*] --> Start_Program
+    Start_Program : entry / <<main>> :: start
+    Start_Program --> Attractions : Window_object_selection:Attraction_Control()
+        Attractions : entry / work_with_attractions : view_list_attractions(list)
+        Attractions : entry / work_with_attractions : buy_attraction()
+        Attractions : entry / work_with_attractions : delete_attraction()
+        Attractions : entry / work_with_attractions : view_attraction()
+        Attractions : entry / work_with_attractions : view_main_valley()
+        Attractions : exit / work_with_attractions : view_list_attractions(list) : exit
 
-            Аттракционы --> Купить_аттракцион : Окно_работы_с_аттракционами:приобрести_аттракцион()
-                Купить_аттракцион : entry / Управление_продажами_аттракционов : приобрести_аттракцион()
-            Купить_аттракцион --> Аттракционы
-            Аттракционы --> Удалить_аттракцион : Окно_работы_с_аттракционами:удаление_аттракциона()
-                Удалить_аттракцион : entry / Управление_аттракционами : удаление_аттракциона()
-            Удалить_аттракцион  --> Аттракционы    
-            Аттракционы --> Просмотр_аттракциона : Окно_работы_с_аттракционами:просмотр_аттракциона()
-                Просмотр_аттракциона : entry / Управление_аттракционами : просмотр_аттракциона()
-                Просмотр_аттракциона : exit / Управление_аттракционами : просмотр_аттракциона() : Выйти
-            Просмотр_аттракциона --> Аттракционы
-            Аттракционы --> Просмотр_главной_аллеи : Окно_работы_с_главной_аллеей:просмотр_главной_аллеи()
-                Просмотр_главной_аллеи : entry / Управление_главной_аллеей : приобрести_аттракцион()
-                Просмотр_главной_аллеи : entry / Управление_главной_аллеей : удалить_аттракцион()
-                Просмотр_главной_аллеи : entry / Управление_главной_аллеей : просмотр_посетителей()
-                Просмотр_главной_аллеи : entry / Управление_главной_аллеей : вернуться_к_выбору_объекта()
-            Просмотр_главной_аллеи --> Аттракционы
+            Attractions --> Buy_Attraction : Window_work_with_attractions:Buy_Attraction()
+                Buy_Attraction : enter / manage_sales_attractions : buy_attraction()
+            Buy_Attraction --> Attractions
+            Attractions --> Delete_Attraction : Window_work_with_attractions:Delete_Attraction()
+                Delete_Attraction : enter / control_attraction : delete_attraction()
+            Delete_Attraction --> Attractions    
+            Attractions --> View_Attraction : Window_work_with_attractions:View_Attraction()
+                View_Attraction : input / control_attraction : view_attraction()
+                View_Attraction : exit / control_attraction : view_attraction() : exit
+            View_Attraction --> Attractions
+            Attractions --> View_Main_Valley : Window_work_with_main_valley:View_Main_Valley()
+                View_Main_Valley : entry / control_main_alley : purchase_attraction()
+                View_Main_Valley : enter / control_main_alley : delete_attraction()
+                View_Main_Valley : entry / control_main_alley : view_visitors()
+                View_Main_Valley : entry / control_main_alley : return_to_selection_object()
+            View_Main_Valley --> Attractions
 
 
-            Купить_аттракцион --> Завершить_программу
-            Завершить_программу : exit <<main>>
-            Завершить_программу --> [*]
+            Buy_Attraction --> Complete_Program
+            Complete_Program : exit <<main>>
+            Complete_Program --> [*]
 
             
        
