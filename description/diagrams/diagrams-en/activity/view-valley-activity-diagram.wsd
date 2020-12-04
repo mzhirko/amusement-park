@@ -1,11 +1,11 @@
 @startuml view-valley-activity-diagram
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Просмотр "Главной аллеи";
-|Симуляция парка развлечений|
-:Список посетителей на "Главной аллее"]
-|Игрок|
-:Работа с посетителями;
+:View "Main Valley";
+|Simulation of Entertainment Park|
+:List of visitors on the "Main Valley"]
+|Player|
+:Working with visitors;
 stop
 @enduml

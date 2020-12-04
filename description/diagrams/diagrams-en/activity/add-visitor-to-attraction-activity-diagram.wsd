@@ -1,24 +1,24 @@
 @startuml add-visitor-to-attraction-activity-diagram
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Определить посетителя на аттракцион;
-|Симуляция парка развлечений|
+:Identify the visitor to the attraction;
+|Simulation of Entertainment Park|
 fork
-:Список посетителей на "Главной аллее"]
+:List of visitors on the "Main Valley"]
 forkagain
-:Список аттракционов]
+:List of attractions]
 endfork
-|Игрок|
+|Player|
 fork
-:Выбрать посетителей;
+:Choose visitors;
 forkagain
-:Выбрать аттракцион;
+:Choose an attraction;
 endfork
-:Подтвердить действие;
-|Симуляция парка развлечений|
-:Добавить выбранных посетителей в очередь на аттракцион;
-:Удалить посетителей из "Главной аллеи";
-|Игрок|
+:Confirm action;
+|Simulation of Entertainment Park|
+:Add selected visitors to the queue for the attraction;
+:Remove visitors from "Main Valley";
+|Player|
 stop
 @enduml

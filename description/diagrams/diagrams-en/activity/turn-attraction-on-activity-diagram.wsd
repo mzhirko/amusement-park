@@ -1,18 +1,18 @@
 @startuml turn-attraction-on-activity-diagram
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Запуск аттракциона;
-|Симуляция парка развлечений|
-if (Количество посетителей в очереди > 1?) then (нет)
-:Действие невозможно]
-else (да)
+:Start the ride;
+|Simulation of Entertainment Park|
+if (Number of visitors in the queue > 1?) then (no)
+:No action possible]
+else (yes)
 repeat
-:Удалить первых 10 посетителей из очереди на аттракцион;
-:Добавить посетителей в список катающихся;
-:Обновить счетчик занятых мест;
-:Обновить счетчик времени;
-repeat while (Количество посетителей в очереди <= 10?) is (да)
+:Remove the first 10 visitors from the queue for the attraction;
+:Add visitors to the riding list;
+:Refresh seat count;
+:Refresh time counter;
+repeat while (Number of visitors in the queue is <= 10?) is (yes)
 endif
 stop
 @enduml

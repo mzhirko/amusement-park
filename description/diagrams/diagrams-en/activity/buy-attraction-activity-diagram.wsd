@@ -1,35 +1,35 @@
 @startuml
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Покупка аттракциона;
-|Симуляция парка развлечений|
-if (На "Главной аллее" есть посетители?) then (нет)
-if (На аттракционе есть посетители?) then (нет)
-:Вычислить стоимость аттракциона;
-:Стоимость аттракциона] 
-|Игрок|
-:Подтвердить действие;
-|Симуляция парка развлечений|
-if (В бюджете парка достаточно средств?) then (да)
-:Обновить значение бюджета парка;
-|Игрок|
+:Buying an attraction;
+|Simulation of Entertainment Park|
+if (On the "Main Alley" have visitors?) then (no)
+If (there are visitors on the ride?) then (no)
+:Calculate the cost of the attraction;
+:Cost of attraction] 
+|Player|
+:Confirm action;
+|Simulation of Entertainment Park|
+if (is there enough money in the park's budget?) then (yes)
+:Update park budget value;
+|Player|
 repeat
-:Ввести название;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-repeat while (Данные корректны?) is (нет) not (да)
-:Название аттракциона]
-:Добавить аттракцион в список;
-else (нет)
-:Действие невозможно]
+:Enter title;
+:Confirm action;
+|Simulation of Entertainment Park|
+repeat while (Is the data correct?) is (no) not (yes)
+:Title of attraction]
+:Add the attraction to the list;
+else (no)
+:No action possible]
 endif
-else (да)
-:Действие невозможно]
+else (yes)
+:No action possible]
 endif
-else (да)
-:Действие невозможно]
-|Игрок|
+else (yes)
+:No action possible]
+|Player|
 endif
 stop
 @enduml

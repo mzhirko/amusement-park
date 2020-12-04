@@ -1,14 +1,14 @@
 @startuml
-|Игрок|
+|Player|
 start
-:Удалить посетителя из парка;
-:Выбрать посетителя из списка;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-:Удалить посетителя из списка;
-:Cообщение об удалении]
-:Cписок посетителей]
-|Игрок|
-:Просмотр изменений;
+:Remove the visitor from the park;
+:Select a visitor from the list;
+:Confirm action;
+|Simulation of Entertainment Park|
+:Remove the visitor from the list;
+:Message about deletion]
+:Visitor List]
+|Player|
+:View changes;
 stop
 @enduml

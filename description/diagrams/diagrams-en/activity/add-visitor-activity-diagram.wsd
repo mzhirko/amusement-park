@@ -1,19 +1,19 @@
 @startuml
-|Игрок|
+|Player|
 start
-:Добавить посетителя;
-|Симуляция парка развлечений|
-:Сгенерировать ID;
+:Add a visitor;
+|Simulation of Entertainment Park|
+:Generate ID;
 :ID]
-|Игрок|
+|Player|
 repeat
-:Ввести количество денежных средств;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-repeat while (Введено число от 1 до 100?) is (нет) not (да)
-:Сохранить изменения;
-:Список людей в очереди]
-|Игрок|
-:Просмотр изменений;
+:Enter amount of money;
+:Confirm action;
+|Simulation of Entertainment Park|
+repeat while (Entered number equals from 1 to 100) is (no) not (yes)
+:Save changes;
+:List of people in the queue]
+|Player|
+:View changes;
 stop
 @enduml

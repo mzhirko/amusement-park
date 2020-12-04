@@ -1,15 +1,16 @@
 @startuml remove-visitor-from-park-activity-diagram
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-|Симуляция парка развлечений|
-:Список посетителей на "Главной аллее"]
-|Игрок|
-:Выбрать посетителей;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-:Добавить выбранных посетителей в очередь за билетами;
-:Удалить посетителей из "Главной аллеи";
-|Игрок|
+:Remove the visitor from the park;
+|Simulation of Entertainment Park|
+:List of visitors on the "Main Valley"]
+|Player|
+:Choose visitors;
+:Confirm action;
+|Simulation of Entertainment Park|
+:Add selected visitors to the queue for tickets;
+:Remove visitors from "Main Valley";
+|Player|
 stop
 @enduml

@@ -1,23 +1,23 @@
 @startuml view-valley-activity-diagram
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Удаление аттракциона;
-|Симуляция парка развлечений|
-if (На "Главной аллее" есть посетители?) then (нет)
-if (На аттракционе есть посетители?) then (нет) 
-:Список аттракционов]
-|Игрок|
-:Выбор аттракциона;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-:Удалить аттракцион  из списка;
-else (да)
-:Действие невозможно]
+:Removal of the attraction;
+|Simulation of Entertainment Park|
+if (are there visitors on the "Main Valley"?) then (no)
+If (are there visitors on the attraction?) then (no) 
+:List of attractions]
+|Player|
+:Choose an attraction;
+:Confirm action;
+|Simulation of Entertainment Park|
+:Remove the attraction from the list;
+else (yes)
+:No action possible]
 endif
-else (да)
-:Действие невозможно]
-|Игрок|
+else (yes)
+:No action possible]
+|Player|
 endif
 stop
 @enduml

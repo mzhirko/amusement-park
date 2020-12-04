@@ -1,24 +1,24 @@
 @startuml buy-ticket
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Приобрести билет;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-:Вычислить стоимость билета;
-:Cтоимость билета]
-|Игрок|
-:Выбрать посетителя;
-:Подтвердить действие;
-|Симуляция парка развлечений|
-if (У посетителя хватает средств на покупку?) then (да)
-:Записать остаток средств посетителя;
-:Пополнить бюджет парка;
-:Посетитель перемещен на "Главную Аллею"]
-else (нет)
-|Симуляция парка развлечений|
-:Удалить посетителя из списка;
+:Buy a ticket;
+:Confirm action;
+|Simulation of Entertainment Park|
+:Calculate ticket price;
+:Ticket price]
+|Player|
+:Choose a visitor;
+:Confirm action;
+|Simulation of Entertainment Park|
+If (visitor has enough money to buy?) then (yes)
+:Write down the remaining funds of the visitor;
+:Recharge the budget of the park;
+:Visitor has been moved to the "Main Valley"]
+else (no)
+|Simulation of Entertainment Park|
+:Remove the visitor from the list;
 endif
-|Игрок|
+|Player|
 stop
 @enduml

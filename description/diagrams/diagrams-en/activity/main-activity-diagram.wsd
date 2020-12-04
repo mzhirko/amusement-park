@@ -1,11 +1,12 @@
 @startuml
-|Игрок|
+|Player|
 start
-:Выбрать действие;
-if (Действие) then (работа с посетителями)
-:Работа с посетителями;
+:Select the action;
+if (Action) then (work with visitors)
+:Working with visitors;
 stop
-else (работа с парком аттракционов)
-:Работа с парком аттракционов;
+else (work with the amusement park)
+:Working with an amusement park;
 stop
+|Simulation of Entertainment Park|
 @enduml

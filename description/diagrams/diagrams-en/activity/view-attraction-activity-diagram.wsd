@@ -1,25 +1,25 @@
 @startuml view-attraction-activity-diagram
 skinparam ConditionEndStyle hline
-|Игрок|
+|Player|
 start
-:Просмотр аттракциона;
-|Симуляция парка развлечений|
-:Список аттракционов]
-|Игрок|
-:Выбрать аттракцион;
+:View the attraction;
+|Simulation of Entertainment Park|
+:List of attractions]
+|Player|
+:Choose an attraction;
 fork
-:Запустить аттракцион;
-|Симуляция парка развлечений|
+:Start the attraction;
+|Simulation of Entertainment Park|
 stop
 forkagain
-:Список посетителей в очереди]
+:List of visitors in queue]
 forkagain
-:Название аттракциона]
+:Title of attraction]
 forkagain
-:Время сеанса]
+:Session time]
 forkagain
-:Места на аттракционе]
+:Seats on the attraction]
 endfork
-|Игрок|
+|Player|
 stop
 @enduml

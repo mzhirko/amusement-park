@@ -1,20 +1,20 @@
 @startuml
-|Игрок|
+|Player|
 start
 fork
-:Просмотр "Главной аллеи";
+:View "Main Valley";
 forkagain
-:Просмотр аттракциона;
+:View the attraction;
 forkagain
-:Удаление аттракциона;
+:Removal of the attraction;
 forkagain
 repeat
-:Покупка аттракциона;
-|Симуляция парка развлечений|
-repeat while (Аттракционов 10?) is (нет) not (да)
-:Завершение программы]
+:Buying an attraction;
+|Simulation of Entertainment Park|
+repeat while (amount of the attractions equals 10?) is (no) not (yes)
+:Completion of the program]
 stop
-|Игрок|
+|Player|
 endfork
 stop
 @enduml

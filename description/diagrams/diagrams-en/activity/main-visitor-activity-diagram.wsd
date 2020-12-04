@@ -1,21 +1,22 @@
 @startuml
-|Игрок|
+|Player|
 start
-if (Работа с посетителями ведется из "Главной аллеи?") then (нет)
+If (Work with visitors is performed from the "Main Valley?") then (no)
 repeat
 fork
-:Добавить посетителя;
+:Add a visitor;
 forkagain
-:Удалить посетителя;
+:Delete visitor;
 endfork
-repeat while (Купить билет?) is (нет) not (да)
-:Приобрести билеты;
+repeat while (Buy a ticket?) is (no) not (yes)
+:Purchase tickets;
 stop
-else (да)
+else (yes)
 fork
-:Определить посетителя на аттракцион;
+:Move the visitor to the attraction;
 forkagain
-:Удалить посетителя из парка;
+:Remove the visitor from the park;
 endfork
 stop
+|Simulation of Entertainment Park|
 @enduml
