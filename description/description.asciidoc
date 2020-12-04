@@ -92,8 +92,11 @@ image::./buy-attraction-activity-diagram.png[]
 image::./turn-attraction-on-activity-diagram.png[]
 
 == 4. Разработка диаграммы классов и направлений развития
-.Диаграмма классов
-image::./class.png[]
+.Диаграмма классов "UI"
+image::./ui-class.png[]
+
+.Диаграмма классов "не UI"
+image::./new-class.png[]
 
 == 5. Разработка пользовательского интерфейса
 .Стартовое меню
