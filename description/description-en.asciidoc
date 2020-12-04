@@ -17,78 +17,78 @@
 
 *Ticket* is a document that certifies the right to use something for a fee.
 
-To start the simulation, press the _start_ button and create at least _1 visitors_. A queue to buy tickets is created.
+To start the simulation, press the _start_ button and create at least _1 visitor_. A queue to buy tickets is created.
 The essence of the visitor includes 2 fields:
 
 * `id` -- 6-digit unique number (generated randomly),
 * `money` - a number that denotes the amount of money (specified by the user) has a value from 1 to 100.
 
-At the beginning of the EP *Maximum number of attractions* installed in a park is *10*.
+At the beginning of the existence EP (program start), has *2 attractions* and *0$* of earnings. *Maximum number of attractions* that can be installed in the park is *10*.
 
 The cost of park visit (`ticketPrice`) is calculated by the formula `*ticketPrice = 10$ * attractionAmount*. Where `attractionAmount` is equal to the number of attractions. 
 
-If there is enough money (`money >= ticketPrice`), the visitor is transferred to the list of people walking along the main avenue according to the results of ticket purchase. *Other it is removed* from the simulation. The balance is returned to the visitor's account if (`money >= ticketPrice`).
-Having got to the territory of the park, the visitor starts walking along the main park alley until the user defines it on any attraction. When a visitor gets to an attraction, he is added to the queue for the attraction. After riding, he returns to the main alley. When a visitor is *removed*, he *ever leaves the EP*. If you select the function * to leave the EP*, he returns to the queue for tickets.
+If there is enough money (`money >= ticketPrice`), the visitor is transferred to the list of people walking along the main alley according to the results of ticket purchase. *Otherwise it is removed* from the simulation. The remaining funds are returned to the visitor's account if (`money >= ticketPrice`).
+Once in the park, the visitor starts walking along the main park alley until the user moves him on any attraction. When a visitor gets to an attraction, he is added to the queue for the attraction. After riding, he returns to the main alley. When a visitor is *removed*, he *forever leaves the EP*. If you select the function *to leave the EP*, he returns to the queue for tickets.
 
-When a visitor "buys" a ticket, the revenue of the park (`Budget`) is increased by the sum of the cost of visiting the park (`Budget=Budget+ticketPrice`).
+When a visitor "buys" a ticket, the earnings of the park (`Budget`) is increased by the sum of the cost of visiting the park (`Budget=Budget+ticketPrice`).
 
-*The cost of the attraction* (`priceOfAttraction`) is *1000$*, after its purchase the price of each *follower* increases by *+100$* in comparison with the previous one (`priceOfAttraction = priceOfAttraction + 100$). When adding an attraction, the user gives it a unique name. Installation (addition) and removal (removal) of attractions is done *only* in an empty EP, that is, all visitors are either removed or in the queue for tickets.
+*The cost of the attraction* (`priceOfAttraction`) is *1000$*, after its purchase the price of each *following* increases by *+100$* in comparison with the previous one (`priceOfAttraction = priceOfAttraction + 100$). When adding an attraction, the user gives it a unique name. Installation (addition) and removal (delition) of attractions is done *only* in an empty EP, that means, all visitors are either removed or appear to be in the queue for tickets.
 
 *The number of seats*(`capacity`) on each attraction is fixed and equal to 5. *Session duration*(`rideTime`) is also fixed and equals 60 seconds.
 
 After the start of the attraction, the number of occupied seats is displayed as (2/10), where `2 = customersOnBoard; 10 = capacity`. The session time is displayed as (15/60), where `15 = currentRideTime; 60 = rideTime`.
 
-The ride is started by the user if there is at least one visitor in the queue. If the number of people in the queue is less than the maximum capacity of the attraction, all the visitors from the queue will sit, otherwise the first n people will sit, where n is the capacity of the attraction.
+The attraction is started by the user if there is at least one visitor in the queue. If the number of people in the queue is less than the maximum capacity of the attraction, all the visitors from the queue will sit, otherwise the first n people will sit, where n is the capacity of the attraction.
 
 After the purchase of 10 attractions, there is a message about successful *simulation completion*, all visitors from the queue and the main alley are removed, and visitors who are already riding on the attractions, finish the session and immediately after that are removed from the EP.
 
 === _Pathways of development_
 . _Add a gift shop;_
-. _Add musical accompaniment;_ .
-. _Add a rating of attractions on a scale from 1 to 5._.
+. _Add musical accompaniment;_
+. _Add a rating of attractions on a scale from 1 to 5._
 
 == 2. Description of the main scenarios of user work with the program
-.Scenario diagram of use
+.Use-Case Diagram
 image::./uc.png[]
 
-== 3. Activity chart development
-.General chart of activity. Actions are performed on the Player's side.
+== 3. Activity diagram development
+.General diagram of activity. Actions are performed on the Player's side.
 image::./main-activity-diagram.png[]
 
-.Chart of activity "Work with visitors". Actions are carried out on the "Player" side.
+.Diagram of activity "Work with visitors". Actions are carried out on the "Player" side.
 image::./main-visitor-activity-diagram.png[]
 
-.The activity chart "Work with amusement park".
+.The activity diagram "Work with amusement park".
 image::./main-attraction-activity-diagram.png[]
 
-.Add visitor activity chart
+."Add visitor" activity diagram
 image::./add-visitor-activity-diagram.png[]
 
-.The "Delete visitor" activity chart
+.The "Delete visitor" activity diagram
 image::./delete-visitor-activity-diagram.png[]
 
-.Chart of activity "Purchase tickets"
+.Diagram of activity "Purchase tickets"
 image::./buy-ticket-activity-diagram.png[]
 
-.Chart of activity "Define visitor to the attraction"
+.Diagram of activity "Move visitor to the attraction"
 image::./add-visitor-to-attraction-activity-diagram.png[]
 
 .Diagram of activity "Remove visitor from the park"
 image::./remove-visitor-from-park-activity-diagram.png[]
 
-.Chart of activity "View "Main Alley".
+.Diagram of activity "View "Main Alley".
 image::./view-valley-activity-diagram.png[]
 
-.Chart of activity "Viewing the attraction"
+.Diagram of activity "View the attraction"
 image::./view-attraction-activity-diagram.png[]
 
 .Activity diagram "Removal of the attraction"
 image::./delete-attraction-activity-diagram.png[]
 
-.Chart of activity "Buying the attraction"
+.Diagram of activity "Buy the attraction"
 image::./buy-attraction-activity-diagram.png[]
 
-.Activity chart "Start the ride"
+.Activity diagram "Start the ride"
 image::./turn-attraction-on-activity-diagram.png[]
 
 == 4. Development of a diagram of classes and directions of development
@@ -105,10 +105,10 @@ image::./ui-class-shorten-3.png[]
 image::./new-class.png[]
 
 == 5. State diagram development
-.Status diagram-1
+.State diagram-1
 image::./state-visitors.png[]
 
-.Status Diagram-2
+.State Diagram-2
 image::./state-attractions.png[]
 
 == 6. User Interface Development
