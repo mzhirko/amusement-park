@@ -127,7 +127,7 @@ image::./ui-attractions-start.png[]
 .Viewing "Main Alley"
 image::./ui-main-valley.png[]
 
-Viewing the attraction
+.Viewing the attraction
 image::./ui-attractions.png[]
 
 == _done by_ 
