@@ -101,6 +101,12 @@ image::./ui-class-shorten-2.png[]
 .Диаграмма классов "UI-3"
 image::./ui-class-shorten-3.png[]
 
+.Диаграмма классов "UI-4"
+image::./ui-class-shorten-4.png[]
+
+.Диаграмма классов "UI-5"
+image::./ui-class-shorten-5.png[]
+
 .Диаграмма классов "не UI"
 image::./new-class.png[]
 
