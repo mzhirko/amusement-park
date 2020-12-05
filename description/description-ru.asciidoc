@@ -91,7 +91,7 @@ image::./buy-attraction-activity-diagram.png[]
 .Диаграмма активности "Запуск аттракциона"
 image::./turn-attraction-on-activity-diagram.png[]
 
-== 4. Разработка диаграммы классов и направлений развития
+== 4. Разработка диаграммы классов
 .Диаграмма классов "UI-1"
 image::./ui-class-shorten-1.png[]
 
@@ -110,14 +110,24 @@ image::./ui-class-shorten-5.png[]
 .Диаграмма классов "не UI"
 image::./new-class.png[]
 
-== 5. Разработка диаграммы состояний
+== 5. Разработка диаграммы направлений развития
+.Добавить сувенирную лавку
+image::./class-develop-souvenir-shop.png[]
+
+.Добавить музыкальное сопровождение
+image::./class-develop-music.png[]
+
+.Добавить рейтинг аттракционов по шкале от 1 до 5
+image::./class-develop-rating.png[]
+
+== 6. Разработка диаграммы состояний
 .Диаграмма состояний-1
 image::./state-visitors.png[]
 
 .Диаграмма состояний-2
 image::./state-attractions.png[]
 
-== 6. Разработка пользовательского интерфейса
+== 7. Разработка пользовательского интерфейса
 .Стартовое меню
 image::./ui-start.png[]
 
