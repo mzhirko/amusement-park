@@ -1,13 +1,13 @@
 @startuml
-Entertainment_Park_Simulation .left.> Manage_Souvenir_StoreImpl: <<create>>
-Entertainment_Park_Simulation ..> Window_Souvenir_Store: <<create>>
+Entertainment_Park_Simulation .[#red].> Manage_Souvenir_StoreImpl: <<create>>
+Entertainment_Park_Simulation .[#red].> Window_Souvenir_Store: <<create>>
 Entertainment_Park_Simulation ..> Window_Work_with_Visitors: <<create>>
 Entertainment_Park_Simulation ..> Visitor: <<create>>
-Entertainment_Park_Simulation .> Souvenir_Store: <<create>>
-Window_Souvenir_Store " +window_souvenir_store\n 1" --> Window_Work_With_Main_Alley
-Manage_Souvenir_StoreImpl " +window_souvenir_store\n 1" --o "1" Window_Souvenir_Store
-Manage_Souvenir_StoreImpl " +create\n 1" --o "1" Window_Work_With_Main_Alley
-Visitor "1..*" <-- "1" Souvenir_Store: customer
+Entertainment_Park_Simulation .[#red].> Souvenir_Store: <<create>>
+Window_Souvenir_Store " +window_souvenir_store\n 1" -[#red]-> Window_Work_With_Main_Alley
+Manage_Souvenir_StoreImpl " +window_souvenir_store\n 1" -[#red]-o "1" Window_Souvenir_Store
+Manage_Souvenir_StoreImpl " +create\n 1" -[#red]-o "1" Window_Work_With_Main_Alley
+Visitor "1..*" <-[#red]- "1" Souvenir_Store: customer
 
 class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
     +create_manage_souvenir_store(): void
@@ -37,7 +37,7 @@ class Visitor {
     + list_souvenirs_of_visitor(): list
 }
 
-class Souvenir_Store << (C,#a4e8e0) >> {
+class Souvenir_Store #ff9999 {
     + purchase_souvenir(int,int): void
     + souvenir_list_in_stock(): list
     + list_souvenirs_price(): list
@@ -46,4 +46,11 @@ class Souvenir_Store << (C,#a4e8e0) >> {
 class Window_Work_With_Main_Alley << (U,DarkMagenta) UI>> {
     + purchase_souvenir(): void
 }
+
+class Window_Souvenir_Store #ff9999 {
+}
+
+class Manage_Souvenir_StoreImpl #ff9999 {
+}
+
 @enduml

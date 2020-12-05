@@ -1,11 +1,11 @@
 @startuml
 Entertainment_Park_Simulation ..> Object_Selection_Window: <<create>>
-Object_Selection_Window "1" --> " +view_ window_аттракциона\n1" Window_View_Attraction
-Entertainment_Park_Simulation ..> Management_Of_FeedbackImpl: <<create>>
-Window_View_Attraction "1" o-- " +создать\n1" Management_Of_FeedbackImpl
-Entertainment_Park_Simulation ..> Attraction_Rating: <<create>>
+Object_Selection_Window "1" --> " +view_attraction_window\n1" View_Attraction_Window
+Entertainment_Park_Simulation .[#red].> Management_Of_FeedbackImpl: <<create>>
+View_Attraction_Window "1" o-[#red]- " +create\n1" Management_Of_FeedbackImpl
+Entertainment_Park_Simulation .[#red].> Attraction_Rating: <<create>>
 Entertainment_Park_Simulation ..> Attraction: <<create>>
-Attraction_Rating "1" <-- "1...*" Attraction: rating
+Attraction_Rating "1" <-[#red]- "1..*" Attraction: rating
 
 class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
 + create_feedbacks_management(): void
@@ -17,12 +17,12 @@ class Management_Of_FeedbackImpl << (I,MidnightBlue) >> {
     + show_list_attractions_rating(): list
 }
 
-class Window_View_Attraction <<(U,DarkMagenta) UI>> {
+class View_Attraction_Window <<(U,DarkMagenta) UI>> {
     + add_rating(): void
     + view_rating(): void
 }
 
-class Attraction_Rating {
+class Attraction_Rating #ff9999 {
     + attraction_rating(int)
     + rate(int): void
     + show_list_attractions_rating(): list
@@ -34,5 +34,6 @@ class Attraction {
 class Object_Selection_Window << (U,DarkMagenta) UI>> {
 }
 
+class Management_Of_FeedbackImpl #ff9999 {}
 
 @enduml
