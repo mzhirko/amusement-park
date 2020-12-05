@@ -1,0 +1,9 @@
+@startuml
+View_Attraction_Window "1" o-up- " +create\n 1" Manage_Attraction_UsageImpl
+
+class View_Attraction_Window << (U,DarkMagenta) UI>> {
+}
+
+class Manage_Attraction_UsageImpl << (I,MidnightBlue) >> {
+}
+@enduml

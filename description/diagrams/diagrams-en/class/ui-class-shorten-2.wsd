@@ -1,0 +1,88 @@
+@startuml
+Simulation ..> Entertainment_Park_Simulation: <<create>>
+
+class Simulation << (M,Maroon) Main >> {
++ start: void
+}
+
+class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
+    + initialization(): void
+    + create_UI(): void
+    + create_park_management(): void
+    + create_management_of_visitors(): void
+    + create_management_of_attractions(): void
+    + create_ticket_sales_management(): void
+    + create_management_of_attraction_sales(): void
+    + create_management_of_the_main_alley(): void
+    + create_management_attraction_usage(): void
+}
+
+class Start_Window << (U,DarkMagenta) UI>> {
+    + start(): void
+}
+
+class Object_Selection_Window << (U,DarkMagenta) UI>> {
+    + manage__visitors(): void
+    + manage_attractions(): void
+    + park_budget(): void
+}
+
+class Work_With_Visitors_Window << (U,DarkMagenta) UI>> {
+    + view_list_visitors(): void
+    + add_visitor(): void
+    + purchase_ticket(): void
+    + delete_visitor(): void
+
+}
+
+class Work_With_Attractions_Window << (U,DarkMagenta) UI>> {
+    + view_list_attractions(): void
+    + buy_attraction(): void
+    + delete_attraction(): void
+    
+}
+
+class Work_With_Main_Alley_Window << (U,DarkMagenta) UI>> {
+    + view_list_attractions(): void
+    + view_visitors_on_alley(): void
+    + remove_visitor_from_park(): void
+    + move_visitor(): void
+    + return_to_object_selection(): void
+
+}
+
+class View_Attraction_Window << (U,DarkMagenta) UI>> {
+    + view_visitors_queue(): void
+    + view_visitors_on_attraction(): void
+    + launch_attraction(): void
+    }
+
+Entertainment_Park_Simulation ..> Start_Window: <<create>>
+Start_Window "1" -->" +object_selection_window" Object_Selection_Window
+Object_Selection_Window "1" -up->" +work_with_visitors_window" Work_With_Visitors_Window
+Object_Selection_Window "1" --up->" +work_with_attractions_window" Work_With_Attractions_Window
+Object_Selection_Window "1" -->" +work_with_main_alley_window" Work_With_Main_Alley_Window
+Object_Selection_Window "1" -->" +view_attraction_window" View_Attraction_Window
+
+class Show_Object_Selection_Window << (U,DarkMagenta) UI>> {
+    - title: string
+    + execute(): void
+}
+
+class Simulation_Command {
+    + execute(): void
+}
+
+class Entertainment_Park_Simulation_Window << (U,DarkMagenta) UI>> {
+    + button_pressed(string): void
+}
+
+hide Simulation_Command circle
+
+Entertainment_Park_Simulation ..> Show_Object_Selection_Window: <<create>>
+Show_Object_Selection_Window --|> Simulation_Command
+Simulation_Command " +commands\n 1..*" --o "1" Entertainment_Park_Simulation_Window
+Start_Window "1" --> " +entertainment_park_simulation_window\n 1" Entertainment_Park_Simulation_Window
+
+
+@enduml

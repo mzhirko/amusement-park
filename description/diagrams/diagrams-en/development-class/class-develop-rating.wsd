@@ -1,0 +1,38 @@
+@startuml
+Entertainment_Park_Simulation ..> Object_Selection_Window: <<create>>
+Object_Selection_Window "1" --> " +view_ window_аттракциона\n1" Window_View_Attraction
+Entertainment_Park_Simulation ..> Management_Of_FeedbackImpl: <<create>>
+Window_View_Attraction "1" o-- " +создать\n1" Management_Of_FeedbackImpl
+Entertainment_Park_Simulation ..> Attraction_Rating: <<create>>
+Entertainment_Park_Simulation ..> Attraction: <<create>>
+Attraction_Rating "1" <-- "1...*" Attraction: rating
+
+class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
++ create_feedbacks_management(): void
+}
+
+class Management_Of_FeedbackImpl << (I,MidnightBlue) >> {
+    + add_rating(int): int
+    + view_rating(): list
+    + show_list_attractions_rating(): list
+}
+
+class Window_View_Attraction <<(U,DarkMagenta) UI>> {
+    + add_rating(): void
+    + view_rating(): void
+}
+
+class Attraction_Rating {
+    + attraction_rating(int)
+    + rate(int): void
+    + show_list_attractions_rating(): list
+}
+
+class Attraction {
+}
+
+class Object_Selection_Window << (U,DarkMagenta) UI>> {
+}
+
+
+@enduml

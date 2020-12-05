@@ -1,0 +1,81 @@
+@startuml
+Simulation ..> Entertainment_Park_Simulation: <<create>>
+Entertainment_Park_Simulation .up.> Manage_ParkImpl: <<create>>
+Entertainment_Park_Simulation .left.> Manage_VisitorsImpl: <<create>>
+Entertainment_Park_Simulation ..> Manage_AttractionsImpl: <<create>>
+Entertainment_Park_Simulation ..> Manage_Ticket_SalesImpl: <<create>>
+Entertainment_Park_Simulation .right.> Manage_Attraction_SalesImpl: <<create>>
+Entertainment_Park_Simulation ..> Manage_Main_AlleyImpl: <<create>>
+Entertainment_Park_Simulation .up.> Manage_Attraction_UsageImpl: <<create>>
+
+class Simulation << (M,Maroon) Main >> {
++ start: void
+}
+
+class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
+    + initialization(): void
+    + create_UI(): void
+    + create_park_management(): void
+    + create_management_of_visitors(): void
+    + create_management_of_attractions(): void
+    + create_ticket_sales_management(): void
+    + create_management_of_attraction_sales(): void
+    + create_management_of_the_main_alley(): void
+    + create_management_attraction_usage(): void
+}
+
+class Manage_VisitorsImpl << (I,MidnightBlue) >> {
+    + add_visitor(id, int): void
+    + delete_visitor(id): bool
+    + remove_visitor_from_park(id): bool
+    + move_visitor(id, string): void
+    - view_list_visitors (id, int): list
+
+}
+
+class Manage_ParkImpl << (I,MidnightBlue) >> {
+    + park_budget(int): int
+    + edit_visitors (Manage_Visitors): void
+    + edit_attractions(Manage_Attractions): Manage_Attractions
+
+}
+
+class Manage_AttractionsImpl << (I,MidnightBlue) >> {
+    + purchase_attraction(Manage_Attraction_Sales): void
+    + delete_attraction(name): bool
+    + view_attraction(Manage_Attraction_Usage): void
+    + view_list_attractions(string): list
+
+}
+
+class Manage_Main_AlleyImpl << (I,MidnightBlue) >> {
+    + purchase_attraction(Manage_Attraction_Sales): void
+    + delete_attraction(name): bool
+    + view_visitors_on_alley(id, int): list
+    + return_to_object_selection(Manage_Park): void
+
+}
+
+class Manage_Ticket_SalesImpl << (I,MidnightBlue) >> {
+    - ticket_cost(int): int
+    + purchase_ticket(int, int): void
+}
+
+
+class Manage_Attraction_SalesImpl << (I,MidnightBlue) >> {
+    - attraction_cost(int): int
+    + buy_attraction(int, int): void
+    + set_name(name): void
+}
+
+class Manage_Attraction_UsageImpl << (I,MidnightBlue) >> {
+    + view_waiters_ queues(id, int): void
+    + view_visitors_on_attraction(id, int): void
+    + launch_attraction(): void
+    - session_time(): int
+    - past_session_time(): int
+    - number_of_seats(): int
+    - occupied_seats(): int
+}
+
+@enduml

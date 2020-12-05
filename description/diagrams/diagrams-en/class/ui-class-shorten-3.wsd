@@ -1,0 +1,26 @@
+@startuml
+class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
+}
+
+class Work_With_Visitors_Window << (U,DarkMagenta) UI>> {
+}
+
+class Work_With_Attractions_Window << (U,DarkMagenta) UI>> {
+}
+
+class Work_With_Main_Alley_Window << (U,DarkMagenta) UI>> {
+}
+
+class View_Attraction_Window << (U,DarkMagenta) UI>> {
+}
+
+class Entertainment_Park_Simulation_Window << (U,DarkMagenta) UI>> {
+}
+
+Entertainment_Park_Simulation .up.> Work_With_Visitors_Window: <<create>>
+Entertainment_Park_Simulation .up.> Work_With_Attractions_Window: <<create>>
+Entertainment_Park_Simulation ..> Work_With_Main_Alley_Window: <<create>>
+Entertainment_Park_Simulation ..> View_Attraction_Window: <<create>>
+Entertainment_Park_Simulation ..> Entertainment_Park_Simulation_Window: <<create>>
+
+@enduml

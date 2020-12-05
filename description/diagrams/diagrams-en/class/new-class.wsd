@@ -1,0 +1,57 @@
+@startuml
+Visitor " 1..* " <-- " 1 " Park: customer
+Visitor " 1..* " <-left- " +people\n 1..* " Attraction: customer
+Park " 1 " o-- " +attractions\n 1..*" Attraction
+Entertainment_Park_Simulation ..> Visitor: <<create>>
+Entertainment_Park_Simulation ..> Park: <<create>>
+Entertainment_Park_Simulation ..> Attraction: <<create>>
+Controller " 1 " --> " 1 " Park: park
+
+class Visitor {
+    + salary: int
+    + id: int
+}
+
+class Park {
+    + budget: int
+    + ticket_price: int
+    + list_of_visitors_on_main_alley: list
+    - delete_visitor_from_main_alley_list(): void
+}
+
+class Attraction {
+    - number_of_seats: int
+    - session_time: int
+    - past_session_time: int
+    + attraction_cost: int
+    + attraction_name(string): name
+    + visitor_queue_ to_attraction: list
+    + visitor_list_to_attraction: list
+    - delete_visitor_from_queue(): void
+    + attraction(string,int): string
+}
+
+class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
++ initialization(): void
++ create_UI(): void
++ create_park_management(): void
++ create_management_of_visitors(): void
++ create_management_of_attractions(): void
++ create_ticket_sales_management(): void
++ create_management_sales_attractions(): void
++ create_management_of_the_main_alley(): void
++ create_management_of_attraction_usage(): void
+}
+
+
+class Controller << (C,#a4e8e0) >> {
+    + create_visitor(): void
+    + delete_visitor(): void
+    + create_attraction(): void
+    + delete_attraction(): void
+    + move_visitor_to_attraction(): void
+    + delete_visitor_from_park(): void
+    + visitor_list(int,int): void
+    + attraction_list(name): list
+}
+@enduml

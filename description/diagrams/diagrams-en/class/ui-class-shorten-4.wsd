@@ -1,0 +1,44 @@
+@startuml
+Object_Selection_Window "1" o-up- " +create\n 1" Manage_VisitorsImpl
+Object_Selection_Window "1" o-up- " +create\n 1" Manage_AttractionsImpl
+Object_Selection_Window "1" o-- " +create\n 1" Manage_ParkImpl
+Work_With_Visitors_Window "1" o-- " +create\n 1" Manage_VisitorsImpl
+Work_With_Visitors_Window "1" o-up- " +create\n 1" Manage_Ticket_SalesImpl
+Work_With_Attractions_Window "1" o-- " +create\n 1" Manage_AttractionsImpl
+Work_With_Attractions_Window "1" o-up- " +create\n 1" Manage_Attraction_SalesImpl
+Work_With_Main_Alley_Window "1" o-- " +create\n 1" Manage_Main_AlleyImpl
+Work_With_Main_Alley_Window "1" o-- " +create\n 1" Manage_VisitorsImpl
+Work_With_Main_Alley_Window "1" o-- " +create\n 1" Manage_AttractionsImpl
+
+
+class Object_Selection_Window << (U,DarkMagenta) UI>> {
+}
+
+class Work_With_Visitors_Window << (U,DarkMagenta) UI>> {
+}
+
+class Work_With_Attractions_Window << (U,DarkMagenta) UI>> {
+}
+
+class Work_With_Main_Alley_Window << (U,DarkMagenta) UI>> {
+}
+
+class Manage_VisitorsImpl << (I,MidnightBlue) >> {
+}
+
+class Manage_ParkImpl << (I,MidnightBlue) >> {
+}
+
+class Manage_AttractionsImpl << (I,MidnightBlue) >> {
+}
+
+class Manage_Main_AlleyImpl << (I,MidnightBlue) >> {
+}
+
+class Manage_Ticket_SalesImpl << (I,MidnightBlue) >> {
+}
+
+
+class Manage_Attraction_SalesImpl << (I,MidnightBlue) >> {
+}
+@enduml

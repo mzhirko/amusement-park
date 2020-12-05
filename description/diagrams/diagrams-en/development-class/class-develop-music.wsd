@@ -1,0 +1,44 @@
+@startuml
+Simulation ..> Entertainment_Park_Simulation: <<create>>
+Entertainment_Park_Simulation ..> Sound: <<create>>
+
+class Entertainment_Park_Simulation << (I,Indigo) Injector >> {
++ play_melody(): Music
+}
+
+class Show_Object_Selection_Window {
+    - title: string
+    + execute(): void
+    + play_melody(): Music
+}
+
+class Simulation << (M,Maroon) Main >> {
++ start: void
+}
+
+class Start_Window << (U,DarkMagenta) UI>> {
+    + start(): void
+}
+
+class Simulation_Command {
+    + execute(): void
+    + play_melody(): Music
+}
+
+class Window_Of_Entertainment_Park_Simulation <<(U,DarkMagenta) UI>> {
+    + pressButton(string): void
+}
+
+class Sound {
+    + play_melody(): Music
+    + melody
+}
+
+hide Show_Object_Selection_Window circle
+hide Simulation_Command circle
+
+Entertainment_Park_Simulation ..> Show_Object_Selection_Window: <<create>>.
+Show_Object_Selection_Window -right-|> Simulation_Command
+Simulation_Command " +commands\n 1...*" --o "1" Window_Of_Entertainment_Park_Simulation
+Start_Window "1" -->" 1\n + window_of_entertainment_park_simulation" Window_Of_Entertainment_Park_Simulation
+@enduml

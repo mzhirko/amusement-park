@@ -43,9 +43,9 @@ The attraction is started by the user if there is at least one visitor in the qu
 After the purchase of 10 attractions, there is a message about successful *simulation completion*, all visitors from the queue and the main alley are removed, and visitors who are already riding on the attractions, finish the session and immediately after that are removed from the EP.
 
 === _Pathways of development_
-. _Add a gift shop;_
+. _Add a souvenir store;_
 . _Add musical accompaniment;_
-. _Add a rating of attractions on a scale from 1 to 5._
+. _Add a rating of attractions._
 
 == 2. Description of the main scenarios of user work with the program
 .Use-Case Diagram
@@ -91,7 +91,7 @@ image::./buy-attraction-activity-diagram.png[]
 .Activity diagram "Start the ride"
 image::./turn-attraction-on-activity-diagram.png[]
 
-== 4. Development of a diagram of classes and directions of development
+== 4. Development of a class diagram
 .Diagram of "UI-1" classes
 image::./ui-class-shorten-1.png[]
 
@@ -101,17 +101,33 @@ image::./ui-class-shorten-2.png[]
 .Diagram of "UI-3" classes
 image::./ui-class-shorten-3.png[]
 
+.Diagram of "UI-4" classes
+image::./ui-class-shorten-4.png[]
+
+.Diagram of "UI-5" classes
+image::./ui-class-shorten-5.png[]
+
 .Non-UI class diagram
 image::./new-class.png[]
 
-== 5. State diagram development
+== 5. Development of directions of development diagrams
+.Add a souvenir store
+image::./class-develop-souvenir-shop.png[]
+
+.Add musical accompaniment
+image::./class-develop-music.png[]
+
+.Add a rating of attractions
+image::./class-develop-rating.png[]
+
+== 6. State diagram development
 .State diagram-1
 image::./state-visitors.png[]
 
 .State Diagram-2
 image::./state-attractions.png[]
 
-== 6. User Interface Development
+== 7. User Interface Development
 .Start menu
 image::./ui-start.png[]
 
