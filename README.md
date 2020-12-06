@@ -20,6 +20,7 @@ _вариант на русском языке_
 - [мокап.](https://github.com/mzhirko/amusement-park/blob/main/description/description-ru.asciidoc)
 
 [Диаграммы](https://github.com/mzhirko/amusement-park/tree/main/description/diagrams) были реализованы с использованием инструмента [PlantUML](https://plantuml.com/).
+
 --------------------------
 # Amusement Park Simulation
 _english version_
