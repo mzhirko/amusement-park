@@ -1,7 +1,7 @@
 # Симуляция Парка Развлечений
 _вариант на русском языке_
 
-**Здесь находится документация к проекту _"Симуляция Парка Развлечений"_.**
+[**Здесь находится документация к проекту _"Симуляция Парка Развлечений"_.**](https://github.com/mzhirko/amusement-park/blob/main/description/description-ru.asciidoc)
 
 Она включает в себя:
 
@@ -25,7 +25,7 @@ _вариант на русском языке_
 # Amusement Park Simulation
 _english version_
 
-**The documentation for _"Amusement Park Simulation"_ project is located here.**
+[**The documentation for _"Amusement Park Simulation"_ project is located here.**](https://github.com/mzhirko/amusement-park/blob/main/description/description-en.asciidoc)
 
 It includes:
 
