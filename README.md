@@ -17,7 +17,9 @@ _вариант на русском языке_
 
 - [диаграмма деятельности;](https://github.com/mzhirko/amusement-park/tree/main/description/diagrams/diagrams-ru/activity)
 
-- [мокап.](https://github.com/mzhirko/amusement-park/blob/main/description/description-ru.asciidoc)
+- [мокап;](https://github.com/mzhirko/amusement-park/blob/main/description/description-ru.asciidoc)
+
+- [скелет реализации.](https://github.com/mzhirko/amusement-park/tree/main/src/sample)
 
 [Диаграммы](https://github.com/mzhirko/amusement-park/tree/main/description/diagrams) были реализованы с использованием инструмента [PlantUML](https://plantuml.com/).
 
@@ -41,7 +43,9 @@ It includes:
 
 - [activity chart;](https://github.com/mzhirko/amusement-park/tree/main/description/diagrams/diagrams-en/activity)
 
-- [mockup.](https://github.com/mzhirko/amusement-park/blob/main/description/description-en.asciidoc)
+- [mockup;](https://github.com/mzhirko/amusement-park/blob/main/description/description-en.asciidoc)
+
+- [implementation.](https://github.com/mzhirko/amusement-park/tree/main/src/sample)
 
 [Diagrams](https://github.com/mzhirko/amusement-park/tree/main/description/diagrams) were implemented using [PlantUML](https://plantuml.com/) tool.
 
