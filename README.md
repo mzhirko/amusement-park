@@ -23,6 +23,8 @@ _вариант на русском языке_
 
 [Диаграммы](https://github.com/mzhirko/amusement-park/tree/main/description/diagrams) были реализованы с использованием инструмента [PlantUML](https://plantuml.com/).
 
+[__Здесь находится описание ошибок, обнаруженных при проектировании модели *"Симуляция Парка Развлечений"*.__](https://github.com/mzhirko/amusement-park/blob/main/mistakes/mistakes.asciidoc)
+
 --------------------------
 # Amusement Park Simulation
 _english version_
