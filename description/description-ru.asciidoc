@@ -117,7 +117,7 @@ image::./class-develop-souvenir-shop-1.png[]
 .Добавить музыкальное сопровождение
 image::./class-develop-music-1.png[]
 
-.Добавить рейтинг аттракционов по шкале от 1 до 5
+.Добавить рейтинг аттракционов
 image::./class-develop-rating-1.png[]
 
 == 6. Разработка диаграммы состояний
