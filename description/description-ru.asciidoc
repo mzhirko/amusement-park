@@ -99,7 +99,7 @@ image::./new-class-1.png[]
 image::./ui-class-shorten-1.png[]
 
 .Диаграмма классов "UI-2"
-image::./ui-class-2.png[]
+image::./ui-class-shorten-2.png[]
 
 .Диаграмма классов "UI-3"
 image::./ui-class-shorten-3.png[]
@@ -109,6 +109,9 @@ image::./ui-class-shorten-4.png[]
 
 .Диаграмма классов "UI-5"
 image::./ui-class-shorten-5.png[]
+
+.Диаграмма классов "UI-6"
+image::./ui-button.png[]
 
 == 5. Разработка диаграммы направлений развития
 .Добавить сувенирную лавку
