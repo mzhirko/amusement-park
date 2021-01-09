@@ -44,8 +44,8 @@
 
 === _Пути развития_
 . _Добавить сувенирную лавку;_
-. _Добавить музыкальное сопровождение;_
-. _Добавить рейтинг аттракционов._
+. _Добавить мелодию при нажатии кнопок;_
+. _Добавить возможность видеть рейтинг при просмотре аттракциона._
 
 == 2. Описание основных сценариев работы пользователя с программой
 .Диаграмма сценариев использования
@@ -92,11 +92,14 @@ image::./buy-attraction-activity-diagram.png[]
 image::./turn-attraction-on-activity-diagram.png[]
 
 == 4. Разработка диаграммы классов
+.Диаграмма классов (классы, описывающие предметную область)
+image::./new-class-1.png[]
+
 .Диаграмма классов "UI-1"
 image::./ui-class-shorten-1.png[]
 
 .Диаграмма классов "UI-2"
-image::./ui-class-shorten-2.png[]
+image::./ui-class-2.png[]
 
 .Диаграмма классов "UI-3"
 image::./ui-class-shorten-3.png[]
@@ -107,18 +110,15 @@ image::./ui-class-shorten-4.png[]
 .Диаграмма классов "UI-5"
 image::./ui-class-shorten-5.png[]
 
-.Диаграмма классов "не UI"
-image::./new-class.png[]
-
 == 5. Разработка диаграммы направлений развития
 .Добавить сувенирную лавку
-image::./class-develop-souvenir-shop.png[]
+image::./class-develop-souvenir-shop-1.png[]
 
 .Добавить музыкальное сопровождение
-image::./class-develop-music.png[]
+image::./class-develop-music-1.png[]
 
 .Добавить рейтинг аттракционов по шкале от 1 до 5
-image::./class-develop-rating.png[]
+image::./class-develop-rating-1.png[]
 
 == 6. Разработка диаграммы состояний
 .Диаграмма состояний-1
