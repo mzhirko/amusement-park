@@ -118,7 +118,7 @@ image::./ui-button.png[]
 image::./class-develop-souvenir-shop-1.png[]
 
 .Добавить музыкальное сопровождение
-image::./class-develop-music-1.png[]
+image::./class-develop-music-1.png.png[]
 
 .Добавить рейтинг аттракционов
 image::./class-develop-rating-1.png[]
